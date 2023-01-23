@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="297.0" prefWidth="245.0" style="-fx-background-color: #3D4956; -fx-background-radius: 8;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <JFXTextArea editable="false" focusColor="#a40e0e" layoutX="16.0" layoutY="21.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="187.0" prefWidth="212.0" style="-fx-alignment: TOP-RIGHT; -fx-text-fill: WHITE; -fx-background-radius: 0; -fx-background-color: #63788c;" unFocusColor="WHITE">
+         <font>
+            <Font name="Arial Black" size="20.0" />
+         </font>
+      </JFXTextArea>
+      <TableView fx:id="tableView" editable="true" layoutX="16.0" layoutY="21.0" prefHeight="187.0" prefWidth="212.0" style="-fx-text-fill: WHITE; -fx-background-color: #63788c;">
+        <columns>
+          <TableColumn fx:id="descriptionColumn" maxWidth="60.0" minWidth="60.0" prefWidth="60.0" text="Des." />
+          <TableColumn fx:id="sizeColumn" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" text="LxH" />
+            <TableColumn fx:id="pcsColumn" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" text="pcs." />
+            <TableColumn fx:id="presyoColumn" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" text="Price" />
+        </columns>
+      </TableView>
+      <JFXButton alignment="TOP_CENTER" layoutX="16.0" layoutY="256.0" onAction="#submit" prefHeight="25.0" prefWidth="80.0" ripplerFill="WHITE" style="-fx-background-color: #c00723; -fx-background-radius: 30 30 30 30;" text="Submit" textAlignment="CENTER" textFill="WHITE" />
+      <Text fx:id="pricetotal" fill="WHITE" layoutX="48.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00.00" textAlignment="RIGHT" wrappingWidth="181.03515625">
+         <font>
+            <Font name="Arial Black" size="25.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="19.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Php">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Text>
+      <JFXButton layoutX="59.0" layoutY="219.0" prefHeight="28.0" prefWidth="174.0" ripplerFill="#00d707" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 30;" text=" " />
+      <JFXButton alignment="TOP_CENTER" layoutX="110.0" layoutY="256.0" onAction="#delete" prefHeight="25.0" prefWidth="120.0" ripplerFill="WHITE" style="-fx-background-color: BLACK; -fx-background-radius: 30 30 30 30;" text="Delete" textAlignment="CENTER" textFill="#f50000" />
+      <JFXTextField fx:id="deskripsyon" layoutX="17.0" layoutY="182.0" prefHeight="25.0" prefWidth="60.0" promptText="Des." />
+      <JFXTextField fx:id="sukat" layoutX="73.0" layoutY="182.0" prefHeight="25.0" prefWidth="40.0" promptText="Size" />
+      <JFXTextField fx:id="piraso" layoutX="115.0" layoutY="182.0" prefHeight="25.0" prefWidth="40.0" promptText="Pcs" />
+      <JFXTextField fx:id="prays" layoutX="156.0" layoutY="182.0" prefHeight="25.0" prefWidth="70.0" promptText="Php" />
+   </children>
+</AnchorPane>
